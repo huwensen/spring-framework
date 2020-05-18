@@ -65,6 +65,8 @@ public interface AutowireCapableBeanFactory extends BeanFactory {
 	 * Constant that indicates no externally defined autowiring. Note that
 	 * BeanFactoryAware etc and annotation-driven injection will still be applied.
 	 * 指示没有外部定义的自动装配的常数。请注意BeanFactoryAware等和注释驱动的注入将仍然适用
+	 * 通过包扫描出来的对象默认注入模型
+	 * 使用时必须显示的在字段上添加注解：@Autowire
 	 * @see #createBean
 	 * @see #autowire
 	 * @see #autowireBeanProperties
@@ -93,6 +95,7 @@ public interface AutowireCapableBeanFactory extends BeanFactory {
 	 * Constant that indicates autowiring the greediest constructor that
 	 * can be satisfied (involves resolving the appropriate constructor).
 	 * 指示自动装配可以满足的最贪婪的构造函数的常数（涉及解析适当的构造函数）。
+	 * 通过构造函数的参数注入
 	 * @see #createBean
 	 * @see #autowire
 	 */

@@ -25,7 +25,7 @@ import org.springframework.lang.Nullable;
  * A BeanDefinition describes a bean instance, which has property values,
  * constructor argument values, and further information supplied by
  * concrete implementations.
- *
+ * Bean定义生命周期：bean定义->BeanFactoryPostProcessor->getBean->BeanPostProcessor->bean实例化完成->放入单例缓存池
  * <p>This is just a minimal interface: The main intention is to allow a
  * {@link BeanFactoryPostProcessor} such as {@link PropertyPlaceholderConfigurer}
  * to introspect and modify property values and other bean metadata.
